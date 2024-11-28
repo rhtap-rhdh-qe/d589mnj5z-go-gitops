@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: d589mnj5z-go-gitops
+  description: This is GitOps manifest for d589mnj5z-go   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: d589mnj5z-go
+    backstage.io/kubernetes-id: d589mnj5z-go 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: d589mnj5z-go   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:d589mnj5z-go
